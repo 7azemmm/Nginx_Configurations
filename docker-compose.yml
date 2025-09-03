@@ -1,5 +1,5 @@
 services:
-  web:
+  webv1:
     build: 
       context: ./django/
     command: gunicorn demo.wsgi:application --bind 0.0.0.0:8000
@@ -8,6 +8,16 @@ services:
       - static_files:/usr/src/app/staticfiles
     expose:
       - 8000
+  
+  webv2:
+    build: 
+      context: ./djangoV2/
+    command: gunicorn demo.wsgi:application --bind 0.0.0.0:8080
+    volumes:
+      - ./djangoV2/:/usr/src/app/
+      - static_files:/usr/src/app/staticfiles
+    expose:
+      - 8080
 
 
   nginx:

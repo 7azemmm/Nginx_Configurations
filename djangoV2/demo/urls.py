@@ -21,6 +21,6 @@ from django.views.generic import TemplateView
 
 urlpatterns = [
     path("admin/", admin.site.urls),
-    path('split_test/', TemplateView.as_view(template_name="p1.html")),
-    
+    path('split_test/', TemplateView.as_view(template_name="p2.html")),
+    # path('p2/', TemplateView.as_view(template_name="p2.html")),
 ]
