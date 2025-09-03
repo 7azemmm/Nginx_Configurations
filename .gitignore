@@ -1,0 +1,5 @@
+venv/
+*.pyc
+settings.json
+django/demo/__pycache__/urls.cpython-312.pyc/
+django/demo/__pycache__/settings.cpython-312.pyc
